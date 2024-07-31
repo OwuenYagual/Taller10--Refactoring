@@ -2,11 +2,11 @@ public class Empleado {
     private String nombre;
     private double salarioBase;
     private int horasTrabajadas;
-    private String departamento;
+    private Departamento departamento;
     private double tarifaHora;
 
     public Empleado(){}
-    public Empleado(String nombre, double salarioBase, int horasTrabajadas, double tarifaHora, String departamento) {
+    public Empleado(String nombre, double salarioBase, int horasTrabajadas, double tarifaHora, Departamento departamento) {
         this.nombre = nombre;
         this.salarioBase = salarioBase;
         this.horasTrabajadas = horasTrabajadas;
@@ -26,16 +26,7 @@ public class Empleado {
         if (horasTrabajadas > 40) {
             salarioTotal += (horasTrabajadas - 40) * 50;
         }
-        switch (departamento) {
-            case "Sistemas":
-                salarioTotal += 20;
-                break;
-            case "Contabilidad":
-                salarioTotal += 10;
-                break;
-            default:
-                break;
-        }
+        salarioTotal+=departamento.getSalarioAdicional();
         return salarioTotal;
     }
 
@@ -71,11 +62,11 @@ public class Empleado {
         this.tarifaHora = tarifaHora;
     }
 
-    public String getDepartamento() {
+    public Departamento getDepartamento() {
         return departamento;
     }
 
-    public void setDepartamento(String departamento) {
+    public void setDepartamento(Departamento departamento) {
         this.departamento = departamento;
     }
 
