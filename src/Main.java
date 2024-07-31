@@ -2,9 +2,9 @@ public class Main {
     public static void main(String[] args) {
         Empresa empresa = new Empresa();
 
-        EmpleadoPorHoras emp1 = new EmpleadoPorHoras("Dario Laborde", 45, 15.0, new Sistemas(), "Masculino");
-        EmpleadoFijo emp2 = new EmpleadoFijo("Jorge Gaibor",700,45,"Contabilidad",40, "Masculino");
-        EmpleadoTemporario emp3 = new EmpleadoTemporario("Jordan Salinas",200,20,"Medico",6, "Masculino");
+        EmpleadoPorHoras emp1 = new EmpleadoPorHoras("Dario Laborde", 45, 15, new Sistemas(), "Masculino");
+        EmpleadoFijo emp2 = new EmpleadoFijo("Jorge Gaibor",700,45,new Contabilidad(),40, "Masculino");
+        EmpleadoTemporario emp3 = new EmpleadoTemporario("Jordan Salinas",200,20,new Medico(),6, "Masculino");
 
         empresa.contratarEmpleado(emp1);
         empresa.contratarEmpleado(emp2);
