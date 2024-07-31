@@ -19,7 +19,6 @@ public class EmpleadoPorHoras extends Empleado {
     public double calcularSalario() {
         double salario = super.getHorasTrabajadas() * tarifaHora;
         return salario;
-    }
 
     // Más metodos
 }
