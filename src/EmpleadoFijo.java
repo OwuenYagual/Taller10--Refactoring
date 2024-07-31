@@ -9,11 +9,8 @@ public class EmpleadoFijo extends Empleado {
     }
 
     public void imprimirDetalles() {
-        System.out.println("Nombre: " + super.getNombre());
-        System.out.println("Genero: " + super.getNombre());
-        System.out.println("Salario: " + super.getSalarioBase());
-        System.out.println("Horas trabajadas: " + super.getHorasTrabajadas());
-        System.out.println("Departamento: " + super.getDepartamento());
+        super.imprimirDetalles();
+        System.out.println("genero: " + genero);
         System.out.println("bonoAnual: " + bonoAnual);
     }
 
