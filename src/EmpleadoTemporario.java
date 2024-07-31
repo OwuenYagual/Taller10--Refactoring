@@ -1,20 +1,18 @@
 public class EmpleadoTemporario extends Empleado {
-    private String nombre;
-    private String genero;
-    private double salarioBase;
-    private int horasTrabajadas;
-    private String departamento;
     private int mesesContrato;
 
-    public EmpleadoTemporario(String nombre, double salarioBase, int horasTrabajadas, String departamento, int mesesContrato, String genero) {
-        
+    public EmpleadoTemporario(String nombre, double salarioBase, int horasTrabajadas, Departamento departamento, int mesesContrato, String genero) {
+        super(nombre, salarioBase, horasTrabajadas, departamento, genero);
         this.mesesContrato = mesesContrato;
-        this.genero = genero;
     }
 
     public void imprimirDetalles() {
-        super.imprimirDetalles();
-        System.out.println("Genero: " + genero);
+        System.out.println("Nombre: " + super.getNombre());
+        System.out.println("Genero: " + super.getNombre());
+        System.out.println("Salario: " + super.getSalarioBase());
+        System.out.println("Horas trabajadas: " + super.getHorasTrabajadas());
+        System.out.println("Departamento: " + super.getDepartamento());
+        System.out.println("Meses de contrato: " + mesesContrato);
     }
 
     // Más metodos
