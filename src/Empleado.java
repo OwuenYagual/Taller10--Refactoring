@@ -42,7 +42,9 @@ public class Empleado {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
-
+    public String getGenero() {
+        return genero;
+    }
     public double getSalarioBase() {
         return salarioBase;
     }
