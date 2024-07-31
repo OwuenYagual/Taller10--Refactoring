@@ -4,6 +4,7 @@ public class EmpleadoPorHoras extends Empleado {
 
     public EmpleadoPorHoras(String nombre, int horasTrabajadas, double tarifaHora, Departamento departamento, String genero) {
         super(nombre, 0, horasTrabajadas, departamento, genero);
+        this.tarifaHora =  tarifaHora;
         super.setSalarioBase(calcularSalario());
     }
 
