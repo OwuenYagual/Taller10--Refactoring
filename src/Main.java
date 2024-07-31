@@ -11,7 +11,9 @@ public class Main {
         empresa.contratarEmpleado(emp3);
 
         emp1.imprimirDetalles();
+        System.out.println();
         emp2.imprimirDetalles();
+        System.out.println();
         emp3.imprimirDetalles();
     }
 }
